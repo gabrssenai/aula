@@ -1,0 +1,29 @@
+article {
+  padding: 50px 30px 20px 60px;
+  margin-left: 40px;
+}
+
+article section {
+  background-color: #cccccc;
+  width: 500px;
+  height: 500px;
+}
+
+article section  ul {
+  line-height: 4;
+}
+
+.bordasArredondadas {
+  border-radius: 10px;
+  margin-left: 40px;
+}
+
+.destaque {
+  color: rgb(17, 255, 0);
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.imgPequena {
+    width: 300px;
+}
