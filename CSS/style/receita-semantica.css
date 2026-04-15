@@ -1,6 +1,8 @@
 article {
   padding: 50px 30px 20px 60px;
   margin-left: 40px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO6wwSYTrFslWZjVOQPZl8cAmaC4i1ISMMew&s");
+  background-repeat: repeat;
 }
 
 article section {
@@ -11,6 +13,11 @@ article section {
 
 article section  ul {
   line-height: 4;
+  color: RGB(255,0,0) !important;
+}
+
+.item {
+    color:rgb(255, 255, 0)
 }
 
 .bordasArredondadas {
@@ -19,11 +26,21 @@ article section  ul {
 }
 
 .destaque {
-  color: rgb(17, 255, 0);
+  color: rgb(255, 255, 0);
   font-weight: bold;
   margin-left: 40px;
 }
 
 .imgPequena {
     width: 300px;
+}
+
+#qualquernome {
+  background-color: RGB(255,0,0);
+  padding: 20px;
+  margin: 10px;
+}
+
+ul {
+  list-style-type: square;
 }
