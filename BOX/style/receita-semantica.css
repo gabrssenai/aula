@@ -12,7 +12,7 @@ article section {
 }
 
 article section  ul {
-  line-height: 2;
+  line-height: 4;
   color: RGB(255,0,0) !important;
 }
 
@@ -43,10 +43,4 @@ article section  ul {
 
 ul {
   list-style-type: square;
-}
-
-
-body{
-    font-family: "Sekuya", system-ui;
-    font-size: 18px;
 }

@@ -1,0 +1,11 @@
+div {
+  border: solid 1px black;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Arial;
+  width: 100px;
+  height: 110px;
+  overflow: scroll;
+  padding: 60px;
+  margin: 20px;
+}
