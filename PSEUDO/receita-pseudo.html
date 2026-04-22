@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/receita-posit.css">
     <title>Receita</title>
+    <link rel="stylesheet" href="style/receita-pseudo.css">
 </head>
-
-<a href="#" class="top-button">↑</a>
-
 <body>
+
+    <a href="#" class="top-button">↑</a>
 
     <div class="aviso-receita">
         <p class="aviso-receita__texto">Envie sua receita de família</p>
-        <a href="#" class="aviso-receita__botao">Participar</a>
+        <a href="#form-receita" class="aviso-receita__botao">Participar</a>
     </div> 
 
     <header class="site-header">
@@ -28,15 +27,21 @@
 
     <main class="container">
 
-        <article class="recipe">
+        <section class="intro">
+            <h2 class="intro__title">Receitas caseiras para o dia a dia</h2>
+            <p class="intro__text">
+                Aqui você encontra receitas simples, saborosas e práticas. Explore os pratos,
+                leia os ingredientes e experimente novas ideias na cozinha.
+            </p>
+        </section>
 
+        <article class="recipe destaque">
             <header class="recipe__header">
                 <h2 class="recipe__title">Bolo de Chocolate</h2>
             </header>
 
             <section class="recipe__section">
                 <h3>Ingredientes</h3>
-
                 <ul class="recipe__list">
                     <li>4 ovos</li>
                     <li>4 colheres (sopa) de chocolate em pó</li>
@@ -50,24 +55,21 @@
 
             <section class="recipe__section">
                 <h3>Modo de Preparo</h3>
-
-                <ol class="recipe__list">
+                <ol class="recipe__list recipe__prep">
                     <li>Em um liquidificador, adicione os ovos, o chocolate em pó, a manteiga, a farinha de trigo, o açúcar e o leite. Depois, bata por 5 minutos.</li>
                     <li>Adicione o fermento e misture com uma espátula delicadamente.</li>
-                    <li>Em uma forma untada, despeje a massa e asse em forno médio (180 ºC), preaquecido, por cerca de 40 minutos. Não se esqueça de usar uma forma alta para essa receita, pois a massa cresce bastante. Outra solução pode ser colocar apenas uma colher de fermento e manter a receita em uma forma pequena.</li>
+                    <li>Em uma forma untada, despeje a massa e asse em forno médio (180 ºC), preaquecido, por cerca de 40 minutos.</li>
                 </ol>
             </section>
-
         </article>
-        <article class="recipe">
 
+        <article class="recipe">
             <header class="recipe__header">
                 <h2 class="recipe__title">Panqueca Simples</h2>
             </header>
 
             <section class="recipe__section">
                 <h3>Ingredientes</h3>
-
                 <ul class="recipe__list">
                     <li>1 ovo</li>
                     <li>1 xícara de leite</li>
@@ -79,27 +81,22 @@
 
             <section class="recipe__section">
                 <h3>Modo de Preparo</h3>
-
-                <ol class="recipe__list">
+                <ol class="recipe__list recipe__prep">
                     <li>Bata todos os ingredientes no liquidificador.</li>
                     <li>Aqueça uma frigideira untada.</li>
                     <li>Despeje pequenas porções da massa.</li>
                     <li>Doure dos dois lados e recheie como desejar.</li>
                 </ol>
             </section>
-
         </article>
 
-
         <article class="recipe">
-
             <header class="recipe__header">
                 <h2 class="recipe__title">Brigadeiro</h2>
             </header>
 
             <section class="recipe__section">
                 <h3>Ingredientes</h3>
-
                 <ul class="recipe__list">
                     <li>1 lata de leite condensado</li>
                     <li>1 colher de sopa de manteiga</li>
@@ -110,27 +107,22 @@
 
             <section class="recipe__section">
                 <h3>Modo de Preparo</h3>
-
-                <ol class="recipe__list">
+                <ol class="recipe__list recipe__prep">
                     <li>Coloque todos os ingredientes na panela.</li>
                     <li>Mexa em fogo baixo até desgrudar do fundo.</li>
                     <li>Espere esfriar.</li>
                     <li>Faça bolinhas e passe no granulado.</li>
                 </ol>
             </section>
-
         </article>
 
-
         <article class="recipe">
-
             <header class="recipe__header">
                 <h2 class="recipe__title">Limonada</h2>
             </header>
 
             <section class="recipe__section">
                 <h3>Ingredientes</h3>
-
                 <ul class="recipe__list">
                     <li>2 limões</li>
                     <li>500 ml de água gelada</li>
@@ -141,16 +133,48 @@
 
             <section class="recipe__section">
                 <h3>Modo de Preparo</h3>
-
-                <ol class="recipe__list">
+                <ol class="recipe__list recipe__prep">
                     <li>Corte os limões em pedaços.</li>
                     <li>Bata no liquidificador com água e açúcar.</li>
                     <li>Coe a mistura.</li>
                     <li>Sirva com gelo.</li>
                 </ol>
             </section>
-
         </article>
+
+        <section class="form-section" id="form-receita">
+            <h2 class="form-section__title">Envie sua receita</h2>
+
+            <form class="recipe-form">
+                <label for="nome">Seu nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">Seu e-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" required>
+
+                <label for="titulo">Nome da receita</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ex.: Bolo de cenoura" required>
+
+                <label for="descricao">Resumo</label>
+                <textarea id="descricao" name="descricao" placeholder="Conte um pouco sobre sua receita"></textarea>
+
+                <div class="recipe-form__options">
+                    <label>
+                        <input type="checkbox" name="aceite" required>
+                        Aceito compartilhar minha receita no site
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="newsletter" checked>
+                        Quero receber novidades
+                    </label>
+                </div>
+
+                <input type="text" value="Campo desabilitado" disabled>
+
+                <button type="submit" class="form-button">Enviar receita</button>
+            </form>
+        </section>
 
     </main>
 
