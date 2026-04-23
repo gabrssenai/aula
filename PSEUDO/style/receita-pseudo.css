@@ -3,9 +3,10 @@
 }
 
 body {
-    margin: 0%;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 /* HEADER*/
@@ -36,10 +37,25 @@ body {
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    transition: 0.2s;
+    
 }
 
 .menu__link:hover{
     background-color: #ddd;
+    transform: translateY(-2px);
+}
+
+.menu__link:active{
+    background-color: #c9b1b2;
+}
+
+.menu__link:focus{
+    outline: 3px solid #d98c4b;
+}
+
+.menu__link:visited{
+    background-color: #6b4c3b;
 }
 
 /*MAIN*/
@@ -55,6 +71,12 @@ body {
     padding: 25px;
     border: 1px solid #ddd;
     border-radius: 10px;
+    transition: 0.2s;
+}
+
+.recipe:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px #2e1405;
 }
 
 .recipe__title {
@@ -73,6 +95,41 @@ body {
     margin-bottom: 8px;
 }
 
+.recipe:first-of-type {
+    border: 2px solid #5a2a0c;
+}
+
+.recipe:last-of-type {
+    border: 2px solid #5a2a0c;
+}
+
+.recipe:nth-of-type(even) {
+    background-color: #fcfcfc;
+}
+
+.recipe:not(.destaque) .recipe__title {
+    color: #7a4d2f;
+}
+
+.recipe__list li:first-child {
+    font-weight: bold;
+}
+
+.recipe__list li:last-child {
+    color: #5a2a0c
+}
+
+.recipe__list li:nth-child(odd) {
+    background-color: #f8f1eb;
+    border-radius: 4px;
+    padding: 4px 6px;
+}
+
+.recipe__list li::marker {
+    color: #a14f1f;
+    font-size: 1.1em;
+}
+
 .top-button {
     position: fixed;
     bottom: 20px;
@@ -85,6 +142,15 @@ body {
     line-height: 50px;
     border-radius: 50%;
     text-decoration: none;
+    z-index: 300;
+}
+
+.top-button:hover {
+    background-color: #7a3b14;
+}
+
+.top-button:active{
+    transform: scale(0.75);
 }
 
 .site-header{
@@ -109,10 +175,139 @@ body {
     border-radius: 6px;
 }
 
+.aviso-receita__botao:hover {
+    background-color: #7a3b14;
+}
+
+.aviso-receita__botao:active {
+    transform: scale(0.75);
+}
+
 .aviso-receita {
     position: fixed;
     right: 20px;
     top: 220px;
     z-index: 200;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
 }
 
+::selection {
+    background-color: #5a2a0c;
+    color: #fff;
+}
+
+.intro {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0 30px 30px;
+    border: 1px solid #ddd;
+}
+
+.intro__title {
+    color: #5a2a0c;
+    margin-top: 0;
+}
+
+.intro__text::first-letter {
+    font-family: 2em;
+    font-weight: bold;
+    color: #5a2a0c;
+}
+
+.intro__text::first-line{
+    font-weight: bold;
+}
+
+.form-section {
+    margin: 30px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.form-section__title {
+    margin-top: 0;
+    color: #5a2a0c;
+}
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recipe-form input,
+.recipe-form textarea {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.recipe-form textarea {
+    resize:vertical;
+}
+
+.recipe-form input:focus,
+.recipe-form textarea:focus {
+    outline: 3px solid #e8c8b3;
+}
+
+.recipe-form input:required,
+.recipe-form textarea:required {
+    border-left: 4px solid #d98c4b;
+}    
+
+.recipe-form input:valid {
+    background-color: #eefaf0;
+    border-color: #4a9c5d;
+}
+
+.recipe-form input:invalid {
+    background-color: #fff3f3;
+    border-color: #c95b5b;
+}
+
+.recipe-form input:disabled {
+    background-color: #e3e3e3;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.recipe-form input [type="checkbox"]:checked {
+    outline: 2px solid #5a2a0c;
+}
+
+.recipe-form input::placeholder,
+.recipe-form textarea::placeholder {
+    color: #9a7e6d;
+    font-style: italic;
+}
+
+.recipe-form__options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.form-button {
+    border: none;
+    background-color: #5a2a0c;
+    color: white;
+    padding: 12px 18x;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #7a3b14;
+}
+
+.form-button:active {
+    transform: scale(0.75);
+}
