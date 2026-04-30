@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media not (max-width: 768px){
+    body{
+        background-color: blue;
+        color:aliceblue;
+    }
+}
+
+@media print {
+    body{
+        background-color: red;
+    }
+}
+
+@media speech {
+    h1{
+        voice-rate:slow;
+    }
+}
